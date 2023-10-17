@@ -1,0 +1,18 @@
+     /* Add some basic styling for responsiveness */
+     body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+    }
+    .container {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    select, input {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        box-sizing: border-box;
+    }
+    input[type="number"] {
+        width: 49%;
+    }

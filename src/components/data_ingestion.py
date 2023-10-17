@@ -15,7 +15,7 @@ from src.components.model_trainer import ModelTrainer
 class DataIngestionConfig:
     train_data_path: str=os.path.join('../../artifacts',"train.csv")
     test_data_path: str=os.path.join('../../artifacts',"test.csv")
-    raw_data_path: str=os.path.join('../../artifacts',"raw.csv")
+    raw_data_path: str=os.path.join('../../artifacts',"raw.csv") 
 
 
 class DataIngestion:
@@ -25,7 +25,7 @@ class DataIngestion:
     def initiate_data_ingestion(self):
         logging.info("Enter the Data Ingestion Method")
         try:
-            df= pd.read_csv('../Notebook/Data/StudentsPerformance.csv')
+            df= pd.read_csv('../Notebook/Data/exams.csv')
             logging.info('Read the Datasets as a dataframe')
 
             os.makedirs(os.path.dirname(self.ingestion_config.train_data_path), exist_ok=True)
