@@ -7,7 +7,7 @@
 * `lunch`: having lunch before test(standard or free/reduced)
 * `test preparation course`: complete or not complete before test 
 * `reading score`: The student's score on a standardized reading test 
-* `writing score`:The student's score on a standardized writing test
+* `writing score`: The student's score on a standardized writing test
 ##### Target variable:
 * `math score`: The student's score on a standardized mathematics test
 #### Data Source Link:
