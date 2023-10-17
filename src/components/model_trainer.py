@@ -21,7 +21,7 @@ from src.utils import save_object,evaluate_models
 
 @dataclass
 class ModelTrainerConfig:
-    trained_model_file_path=os.path.join("artifacts","model.pkl")
+    trained_model_file_path=os.path.join("../../artifacts","model.pkl")
 
 class ModelTrainer:
     def __init__(self):
@@ -86,7 +86,7 @@ class ModelTrainer:
 
 
             model_report:dict=evaluate_models(X_train=X_train,y_train=y_train,X_test=X_test,y_test=y_test,
-                                             models=models,param=params)
+                                             models=models,param=params) # type: ignore
             
             ## To get best model score from dict
             best_model_score = max(sorted(model_report.values()))
@@ -99,7 +99,7 @@ class ModelTrainer:
             best_model = models[best_model_name]
 
             if best_model_score<0.6:
-                raise CustomException("No best model found")
+                raise CustomException("No best model found") # type: ignore
             logging.info(f"Best found model on both training and testing dataset")
 
             save_object(
@@ -113,4 +113,4 @@ class ModelTrainer:
             return r2_square, best_model
         
         except Exception as e:
-            raise CustomException(e,sys)
+            raise CustomException(e,sys) # type: ignore
