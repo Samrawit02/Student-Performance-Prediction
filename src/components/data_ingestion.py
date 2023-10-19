@@ -44,7 +44,7 @@ class DataIngestion:
                 self.ingestion_config.raw_data_path
             )
         except Exception as e: 
-            raise CustomException(e,sys) # type: ignore
+            raise CustomException(e,sys) 
 
     
 if __name__== "__main__":
