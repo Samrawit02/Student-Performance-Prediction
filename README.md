@@ -28,6 +28,7 @@
 3. Model Training: 
     * In this phase base model is tested. The best model is found LinearRegression
     * Model is saved as pickle file.
+    
 
 4. Prediction Pipeline
     * This pipeline converts given data into dataframe and has various functions to load pickle and predict the final results in python.
