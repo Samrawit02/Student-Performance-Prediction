@@ -30,16 +30,19 @@
     * Model is saved as pickle file.
 
 4. Prediction Pipeline
-    * This pipeline converts given data into dataframe and has various functions to load pickle and predict the final results in python
+    * This pipeline converts given data into dataframe and has various functions to load pickle and predict the final results in python.
 
-5. Flask App creation:
+5. Train Pipeline
+    * This pipeline handles the initialization and training of machine learning models designed to predict student exam performance. It delineates the crucial stages, commencing with data ingestion, followed by data transformation, and culminating in model training.
+
+6. Flask App creation:
     * Flask app is created with User Interface to predict the Maths score inside web app.
 
 # Exploratory Data Analysis Notebook
-Link: [EDA STUDENT PERFORMANCE](./src/Notebook/EDA%20STUDENT%20PERFORMANCE.ipynb)
+Link: [EDA STUDENT PERFORMANCE](https://github.com/Samrawit02/MLProject/blob/main/src/Notebook/EDA%20STUDENT%20PERFORMANCE.ipynb)
 
 # Model Training Notebook
-Link: [Model Training](./src/Notebook/Model%20Training.ipynb)
+Link: [Model Training](https://github.com/Samrawit02/MLProject/blob/main/src/Notebook/Model%20Training.ipynb)
 
 
 
