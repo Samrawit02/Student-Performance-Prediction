@@ -8,4 +8,5 @@ xgboost
 dataclasses
 dill
 Flask
-#  -e .
+IPython
+ -e .
