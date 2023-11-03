@@ -9,4 +9,5 @@ dataclasses
 dill
 Flask
 IPython
+flask_cors
 #   -e .

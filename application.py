@@ -1,6 +1,7 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template,jsonify
 
 from src.pipeline.predict_pipeline import  CustomData, PredictPipeline
+from flask_cors import CORS, cross_origin
 
 from sklearn.preprocessing import StandardScaler
 
@@ -30,13 +31,36 @@ def predict_datapoint():
 
         )
         pred_df= data.get_data_as_data_frame()
-        print(pred_df)
 
         predict_pipeline = PredictPipeline()
         results = predict_pipeline.predict(pred_df)
 
         return render_template('home.html', results=round(results[0],2))
+
+@app.route('/predictAPI', methods=['POST'])
+@cross_origin()
+def predict_api():
+    if request.method=='POST':
+        data = CustomData( 
+            gender=request.json['gender'], 
+            race_ethnicity=request.json['ethnicity'],
+            parental_level_of_education=request.json["parental_level_of_education"],
+            lunch=request.json['lunch'], 
+            test_preparation_course=request.json['test_preparation_course'], 
+            reading_score= float(request.json["reading_score"]),
+            writing_score=float(request.json["writing_score"]), 
+        )
+            
+        pred_df= data.get_data_as_data_frame()
+        predict_pipeline = PredictPipeline()
+        results = predict_pipeline.predict(pred_df)
+            
+        dct = {'maths_score': round(results[0],2)}
+        return jsonify(dct)
+
+        
+
     
 if __name__=="__main__":
-    # app.debug = True
+    app.debug = True
     app.run(host="0.0.0.0")
