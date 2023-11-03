@@ -38,6 +38,9 @@
 
 6. Flask App creation:
     * Flask app is created with User Interface to predict the Maths score inside web app.
+7. AWS [LINK](http://performancepredictor-env.eba-rmeuhmsi.eu-north-1.elasticbeanstalk.com/)
+
+8. REST API [LINK](http://performancepredictor-env.eba-rmeuhmsi.eu-north-1.elasticbeanstalk.com/predictAPI)
 
 # Exploratory Data Analysis Notebook
 Link: [EDA STUDENT PERFORMANCE](https://github.com/Samrawit02/MLProject/blob/main/src/Notebook/EDA%20STUDENT%20PERFORMANCE.ipynb)
